@@ -24,16 +24,12 @@ export default function Home() {
   return (
     <div className="px-8 pt-10 font-sans text-lg bg-gradient-to-tl from-blue-500 to-green-400">
       <header className="py-10 flex flex-col items-center">
-        <img
+        <Image
           alt="Team Logo"
-          className="w-24 h-24 mb-6"
-          height="100"
+          className="mb-6"
+          width={100}
+          height={100}
           src="/logo.svg"
-          style={{
-            aspectRatio: "100/100",
-            objectFit: "cover",
-          }}
-          width="100"
         />
         <h1 className="text-5xl font-bold text-center text-white">
           Monash Automation
@@ -172,7 +168,8 @@ export default function Home() {
             Join Us
           </h2>
           <p className="text-center text-white mb-10">
-            We are looking for skilled and passionate individuals to join our team
+            We are looking for skilled and passionate individuals to join our
+            team
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
