@@ -177,7 +177,7 @@ export default function Home() {
               <CardHeader className="p-4">
                 <h3 className="text-2xl text-center font-bold">Tech Member</h3>
               </CardHeader>
-              <CardContent className="p-4 h-80">
+              <CardContent className="p-4 md:h-80">
                 <p className="text-gray-600 pb-8">
                   A tech member provides essential expertise to navigate and
                   implement technological solutions. They contribute to
@@ -214,7 +214,7 @@ export default function Home() {
                   Business Member
                 </h3>
               </CardHeader>
-              <CardContent className="p-4 h-80">
+              <CardContent className="p-4 md:h-80">
                 <p className="text-gray-600 pb-8">
                   A business member brings strategic acumen and managerial
                   skills to ensure project success. They bridge the gap between
