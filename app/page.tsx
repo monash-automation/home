@@ -173,11 +173,11 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <Card className="bg-white rounded-xl shadow-md">
+            <Card className="bg-white rounded-xl shadow-md grid grid-cols-1 justify-between">
               <CardHeader className="p-4">
                 <h3 className="text-2xl text-center font-bold">Tech Member</h3>
               </CardHeader>
-              <CardContent className="p-4 md:h-80">
+              <CardContent className="p-4">
                 <p className="text-gray-600 pb-8">
                   A tech member provides essential expertise to navigate and
                   implement technological solutions. They contribute to
@@ -197,24 +197,22 @@ export default function Home() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button variant="link">
-                  <a
-                    className="text-lg text-blue-500 hover:underline mt-4"
-                    href="https://forms.gle/B4nR4griC5d3ryHP7"
-                  >
-                    Apply Now
-                  </a>
-                </Button>
+                <a
+                  className="text-lg font-semibold text-blue-500 hover:underline"
+                  href="https://forms.gle/B4nR4griC5d3ryHP7"
+                >
+                  Apply Now
+                </a>
               </CardFooter>
             </Card>
 
-            <Card className="bg-white rounded-xl shadow-md">
+            <Card className="bg-white rounded-xl shadow-md grid grid-cols-1 justify-between">
               <CardHeader className="p-4">
                 <h3 className="text-2xl text-center font-bold">
                   Business Member
                 </h3>
               </CardHeader>
-              <CardContent className="p-4 md:h-80">
+              <CardContent className="p-4">
                 <p className="text-gray-600 pb-8">
                   A business member brings strategic acumen and managerial
                   skills to ensure project success. They bridge the gap between
@@ -224,25 +222,22 @@ export default function Home() {
                 </p>
                 <ul className="grid grid-cols-1 lg:grid-cols-2 xl:pl-10 text-gray-600 list-disc pl-5">
                   <li>Recruitment</li>
-                  <li>Team planning</li>
+                  <li>Team planning & collaboration</li>
                   <li>Financial management</li>
                   <li>Networking with industry</li>
                   <li>Social Media</li>
-                  <li>Collaborating with teams</li>
                   <li>Accounting</li>
                   <li>HR tasks</li>
                   <li>Team processes optimization</li>
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button variant="link">
-                  <a
-                    className="text-lg text-blue-500 hover:underline mt-4"
-                    href="https://forms.gle/dwEZDEWWVrC3txd77"
-                  >
-                    Apply Now
-                  </a>
-                </Button>
+                <a
+                  className="text-lg font-semibold text-blue-500 hover:underline"
+                  href="https://forms.gle/dwEZDEWWVrC3txd77"
+                >
+                  Apply Now
+                </a>
               </CardFooter>
             </Card>
           </div>
