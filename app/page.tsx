@@ -15,10 +15,8 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import labImage from "../public/lab-old.jpg";
 import { PiTiktokLogo } from "react-icons/pi";
-import { FaXTwitter } from "react-icons/fa6";
 import XmasTreePhotos from "@/components/xmas-tree-photos";
 import ChineseNewYearDragon from "@/components/chinese-new-year-dragons";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function Home() {
@@ -132,7 +130,7 @@ export default function Home() {
                     window for easy retrieval.
                   </p>
                 </div>
-                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full">
+                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pl-6">
                   <AspectRatio  ratio={4 / 3}>
                     <Image className="rounded-[0.4rem]" src={labImage} alt={"previous lab"} fill />
                   </AspectRatio>
@@ -157,7 +155,7 @@ export default function Home() {
                     500 LEDs and display live effects.
                   </p>
                 </div>
-                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full">
+                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pr-6">
                   <XmasTreePhotos />
                 </div>
               </CardContent>
@@ -176,7 +174,7 @@ export default function Home() {
                   3D printing technology.
                   </p>
                 </div>
-                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full">
+                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pl-6">
                   <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-xl">
                     <ChineseNewYearDragon />
                   </div>
