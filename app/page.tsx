@@ -17,6 +17,7 @@ import labImage from "../public/lab-old.jpg";
 import { PiTiktokLogo } from "react-icons/pi";
 import { FaXTwitter } from "react-icons/fa6";
 import XmasTreePhotos from "@/components/xmas-tree-photos";
+import ChineseNewYearDragon from "@/components/chinese-new-year-dragons";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -131,9 +132,9 @@ export default function Home() {
                     window for easy retrieval.
                   </p>
                 </div>
-                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-xl">
-                  <AspectRatio ratio={4 / 3}>
-                    <Image src={labImage} alt={"previous lab"} fill />
+                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full">
+                  <AspectRatio  ratio={4 / 3}>
+                    <Image className="rounded-[0.4rem]" src={labImage} alt={"previous lab"} fill />
                   </AspectRatio>
                 </div>
               </CardContent>
@@ -156,8 +157,29 @@ export default function Home() {
                     500 LEDs and display live effects.
                   </p>
                 </div>
-                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-xl">
+                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full">
                   <XmasTreePhotos />
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white rounded-xl shadow-md lg:mx-10 py-8">
+              <CardContent className="p-4 lg:p-8 flex gap-6 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
+                <div className="flex-1 sm:px-10 md:px-4">
+                  <h3 className="text-2xl font-bold mb-5">
+                    Chinese New Year Dragons
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                  Uncover the wonder of crafting Gradient Chinese New Year Dragons with 3D printers, a captivating process that turns filament 
+                  into eye-catching, vibrant creations. Delve into the fascinating technique of mixing colors and precise printing. 
+                  The outcome? Dragons that are not just visually appealing but also showcase the innovative capabilities of 
+                  3D printing technology.
+                  </p>
+                </div>
+                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full">
+                  <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-xl">
+                    <ChineseNewYearDragon />
+                  </div>
                 </div>
               </CardContent>
             </Card>

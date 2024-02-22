@@ -2,17 +2,16 @@
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
-import photo1 from "@/public/project-xmas-tree/1.jpg";
-import photo2 from "@/public/project-xmas-tree/2.jpg";
-import photo3 from "@/public/project-xmas-tree/3.jpg";
-import photo4 from "@/public/project-xmas-tree/4.jpg";
+import photo1 from "@/public/project-newyear-dragons/1.jpg";
+import photo2 from "@/public/project-newyear-dragons/2.jpg";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const photos = [photo1, photo2, photo3, photo4];
+const photos = [photo1, photo2];
 
-export default function XmasTreePhotos() {
+export default function ChineseNewYearDragon() {
   return (
     <Swiper
       modules={[Autoplay, A11y]}
@@ -28,7 +27,7 @@ export default function XmasTreePhotos() {
       {photos.map((photo) => (
         <SwiperSlide key={photo.src}>
           <AspectRatio ratio={4 / 3}>
-            <Image className="rounded-[0.4rem]" src={photo} alt={"xmas tree project"} fill />
+            <Image className="rounded-[0.4rem]" src={photo} alt={"new year dragon project"} fill />
           </AspectRatio>
         </SwiperSlide>
       ))}
