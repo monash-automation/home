@@ -28,7 +28,7 @@ export default function XmasTreePhotos() {
       {photos.map((photo) => (
         <SwiperSlide key={photo.src}>
           <AspectRatio ratio={4 / 3}>
-            <Image className="rounded-2xl" src={photo} alt={"xmas tree project"} fill />
+            <Image className="rounded-[0.4rem]" src={photo} alt={"xmas tree project"} fill />
           </AspectRatio>
         </SwiperSlide>
       ))}

@@ -134,7 +134,7 @@ export default function Home() {
                 </div>
                 <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full">
                   <AspectRatio  ratio={4 / 3}>
-                    <Image className="rounded-2xl" src={labImage} alt={"previous lab"} fill />
+                    <Image className="rounded-[0.4rem]" src={labImage} alt={"previous lab"} fill />
                   </AspectRatio>
                 </div>
               </CardContent>

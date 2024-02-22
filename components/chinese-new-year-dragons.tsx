@@ -27,7 +27,7 @@ export default function ChineseNewYearDragon() {
       {photos.map((photo) => (
         <SwiperSlide key={photo.src}>
           <AspectRatio ratio={4 / 3}>
-            <Image className="rounded-2xl" src={photo} alt={"new year dragon project"} fill />
+            <Image className="rounded-[0.4rem]" src={photo} alt={"new year dragon project"} fill />
           </AspectRatio>
         </SwiperSlide>
       ))}
