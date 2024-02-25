@@ -18,10 +18,15 @@ import { PiTiktokLogo } from "react-icons/pi";
 import XmasTreePhotos from "@/components/xmas-tree-photos";
 import ChineseNewYearDragon from "@/components/chinese-new-year-dragons";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="px-8 pt-10 font-sans text-lg bg-gradient-to-tl from-blue-500 to-green-400">
+      <Head>
+        <title>Monash Automation</title>
+        <meta name="description" content="Monash Automation is a collaborative, student-led engineering team based at Monash University, Clayton. Operating from the Digital Twin Manufacturing Lab, students engage in hands-on projects, working with cutting-edge technologies such as 3D printing services, automation systems, and digital twin technologies. Under the guidance of academic advisors, students contribute to meaningful and innovative engineering projects."/>
+      </Head>
       <header className="py-10 flex flex-col items-center">
         <Image
           alt="Team Logo"
@@ -33,8 +38,8 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-center text-white">
           Monash Automation
         </h1>
-        <p className="text-center text-white">
-          We are a student engineering team from Monash University
+        <p className="text-center text-white pt-2">
+          Monash Automation is a collaborative, student-led engineering team based at Monash University, Clayton. Operating from the Digital Twin Manufacturing Lab, students engage in hands-on projects, working with cutting-edge technologies such as 3D printing services, automation systems, and digital twin technologies.
         </p>
       </header>
 
