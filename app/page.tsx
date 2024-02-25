@@ -15,18 +15,19 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import labImage from "../public/lab-old.jpg";
 import { PiTiktokLogo } from "react-icons/pi";
-import XmasTreePhotos from "@/components/xmas-tree-photos";
-import ChineseNewYearDragon from "@/components/chinese-new-year-dragons";
+import XmasPhotoCarousel from "@/components/xmas-photo-carousel";
+import DragonPhoto from "@/components/dragon-photo";
 import Link from "next/link";
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  description:
+    "Monash Automation is a collaborative, student-led engineering team based at Monash University, Clayton. Operating from the Digital Twin Manufacturing Lab, students engage in hands-on projects, working with cutting-edge technologies such as 3D printing services, automation systems, and digital twin technologies. Under the guidance of academic advisors, students contribute to meaningful and innovative engineering projects.",
+};
 
 export default function Home() {
   return (
     <div className="px-8 pt-10 font-sans text-lg bg-gradient-to-tl from-blue-500 to-green-400">
-      <Head>
-        <title>Monash Automation</title>
-        <meta name="description" content="Monash Automation is a collaborative, student-led engineering team based at Monash University, Clayton. Operating from the Digital Twin Manufacturing Lab, students engage in hands-on projects, working with cutting-edge technologies such as 3D printing services, automation systems, and digital twin technologies. Under the guidance of academic advisors, students contribute to meaningful and innovative engineering projects."/>
-      </Head>
       <header className="py-10 flex flex-col items-center">
         <Image
           alt="Team Logo"
@@ -39,7 +40,11 @@ export default function Home() {
           Monash Automation
         </h1>
         <p className="text-center text-white pt-2">
-          Monash Automation is a collaborative, student-led engineering team based at Monash University, Clayton. Operating from the Digital Twin Manufacturing Lab, students engage in hands-on projects, working with cutting-edge technologies such as 3D printing services, automation systems, and digital twin technologies.
+          Monash Automation is a collaborative, student-led engineering team
+          based at Monash University, Clayton. Operating from the Digital Twin
+          Manufacturing Lab, students engage in hands-on projects, working with
+          cutting-edge technologies such as 3D printing services, automation
+          systems, and digital twin technologies.
         </p>
       </header>
 
@@ -136,8 +141,14 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pl-6">
-                  <AspectRatio  ratio={4 / 3}>
-                    <Image className="rounded-[0.4rem]" src={labImage} alt={"previous lab"} fill />
+                  <AspectRatio ratio={4 / 3}>
+                    <Image
+                      className="rounded-[0.4rem]"
+                      src={labImage}
+                      alt={"previous lab layout"}
+                      sizes="100vw"
+                      priority={false}
+                    />
                   </AspectRatio>
                 </div>
               </CardContent>
@@ -161,7 +172,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pr-6">
-                  <XmasTreePhotos />
+                  <XmasPhotoCarousel />
                 </div>
               </CardContent>
             </Card>
@@ -173,15 +184,18 @@ export default function Home() {
                     Chinese New Year Dragons
                   </h3>
                   <p className="text-gray-600 text-lg">
-                  Uncover the wonder of crafting Gradient Chinese New Year Dragons with 3D printers, a captivating process that turns filament 
-                  into eye-catching, vibrant creations. Delve into the fascinating technique of mixing colors and precise printing. 
-                  The outcome? Dragons that are not just visually appealing but also showcase the innovative capabilities of 
-                  3D printing technology.
+                    Uncover the wonder of crafting Gradient Chinese New Year
+                    Dragons with 3D printers, a captivating process that turns
+                    filament into eye-catching, vibrant creations. Delve into
+                    the fascinating technique of mixing colors and precise
+                    printing. The outcome? Dragons that are not just visually
+                    appealing but also showcase the innovative capabilities of
+                    3D printing technology.
                   </p>
                 </div>
                 <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pl-6">
                   <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-xl">
-                    <ChineseNewYearDragon />
+                    <DragonPhoto />
                   </div>
                 </div>
               </CardContent>
