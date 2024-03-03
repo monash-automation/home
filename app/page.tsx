@@ -21,8 +21,16 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Monash Automation",
+  applicationName: "Monash Automation Home Page",
   description:
     "Monash Automation is a collaborative, student-led engineering team based at Monash University, Clayton. Operating from the Digital Twin Manufacturing Lab, students engage in hands-on projects, working with cutting-edge technologies such as 3D printing services, automation systems, and digital twin technologies. Under the guidance of academic advisors, students contribute to meaningful and innovative engineering projects.",
+  keywords: [
+    "Monash University",
+    "Monash Automation",
+    "student team",
+    "engineering",
+  ],
 };
 
 export default function Home() {
