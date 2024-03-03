@@ -19,6 +19,13 @@ import XmasPhotoCarousel from "@/components/xmas-photo-carousel";
 import DragonPhoto from "@/components/dragon-photo";
 import Link from "next/link";
 import { Metadata } from "next";
+import {
+  ProjectCard,
+  ProjectDescription,
+  ProjectImage,
+  ProjectInfo,
+  ProjectName,
+} from "@/components/project-card";
 
 export const metadata: Metadata = {
   title: "Monash Automation",
@@ -123,92 +130,79 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-bold text-center text-white mb-5">
+        <section
+          className="grid grid-cols-1 gap-4 md:gap-8 lg:gap-12 lg:mx-20"
+          aria-label="projects"
+        >
+          <h2 className="text-3xl font-bold text-center text-white">
             Our Projects
           </h2>
 
-          <div className="grid grid-cols-1 gap-10">
-            <Card className="bg-white rounded-xl shadow-md lg:mx-10 py-8">
-              <CardContent className="p-4 lg:p-8 flex gap-6 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
-                <div className="flex-1 sm:px-10 md:px-4">
-                  <h3 className="text-2xl font-bold mb-5">
-                    Automating Printing Service
-                  </h3>
-                  <p className="text-gray-600 text-lg">
-                    The automated printing service on campus provides students
-                    with a user-friendly solution to bring their 3D models to
-                    life. Once students upload a G-code or STL file, the server
-                    efficiently schedules the printing process. Students can
-                    conveniently monitor the entire printing procedure online.
-                    Upon completion, the printed model is carefully placed on a
-                    designated shelf by robots, and students receive timely
-                    notifications for pickup. When students arrive at the lab,
-                    the robot ensures their printed models are positioned at the
-                    window for easy retrieval.
-                  </p>
-                </div>
-                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pl-6">
-                  <AspectRatio ratio={4 / 3}>
-                    <Image
-                      className="rounded-[0.4rem]"
-                      src={labImage}
-                      alt={"previous lab layout"}
-                      sizes="100vw"
-                      priority={false}
-                    />
-                  </AspectRatio>
-                </div>
-              </CardContent>
-            </Card>
+          <ProjectCard>
+            <ProjectInfo>
+              <ProjectName>Automated Printing Service</ProjectName>
+              <ProjectDescription>
+                The automated printing service on campus provides students with
+                a user-friendly solution to bring their 3D models to life. Once
+                students upload a G-code or STL file, the server efficiently
+                schedules the printing process. Students can conveniently
+                monitor the entire printing procedure online. Upon completion,
+                the printed model is carefully placed on a designated shelf by
+                robots, and students receive timely notifications for pickup.
+                When students arrive at the lab, the robot ensures their printed
+                models are positioned at the window for easy retrieval.
+              </ProjectDescription>
+            </ProjectInfo>
+            <ProjectImage>
+              <AspectRatio ratio={4 / 3}>
+                <Image
+                  className="rounded-[0.4rem]"
+                  src={labImage}
+                  alt={"previous lab layout"}
+                  sizes="100vw"
+                  priority={false}
+                />
+              </AspectRatio>
+            </ProjectImage>
+          </ProjectCard>
 
-            <Card className="bg-white rounded-xl shadow-md lg:mx-10 py-8">
-              <CardContent className="p-4 lg:p-8 flex gap-6 lg:gap-24 flex-col lg:flex-row justify-between items-center">
-                <div className="flex-1 md:px-4">
-                  <h3 className="text-2xl font-bold mb-5">Christmas Tree</h3>
-                  <p className="text-gray-600 text-lg">
-                    A fun little side project - dynamic Christmas tree lights
-                    inspired by{" "}
-                    <a
-                      className="underline"
-                      href="https://www.youtube.com/watch?v=TvlpIojusBE"
-                    >
-                      Matt Parker
-                    </a>
-                    . This uses computer vision to calculate the 3D positions of
-                    500 LEDs and display live effects.
-                  </p>
-                </div>
-                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pr-6">
-                  <XmasPhotoCarousel />
-                </div>
-              </CardContent>
-            </Card>
+          <ProjectCard>
+            <ProjectImage>
+              <XmasPhotoCarousel />
+            </ProjectImage>
+            <ProjectInfo>
+              <ProjectName>Christmas Tree</ProjectName>
+              <ProjectDescription>
+                A fun little side project - dynamic Christmas tree lights
+                inspired by &nbsp;
+                <a
+                  className="underline"
+                  href="https://www.youtube.com/watch?v=TvlpIojusBE"
+                >
+                  Matt Parker
+                </a>
+                . This uses computer vision to calculate the 3D positions of 500
+                LEDs and display live effects.
+              </ProjectDescription>
+            </ProjectInfo>
+          </ProjectCard>
 
-            <Card className="bg-white rounded-xl shadow-md lg:mx-10 py-8">
-              <CardContent className="p-4 lg:p-8 flex gap-6 lg:gap-24 flex-col lg:flex-row-reverse justify-between items-center">
-                <div className="flex-1 sm:px-10 md:px-4">
-                  <h3 className="text-2xl font-bold mb-5">
-                    Chinese New Year Dragons
-                  </h3>
-                  <p className="text-gray-600 text-lg">
-                    Uncover the wonder of crafting Gradient Chinese New Year
-                    Dragons with 3D printers, a captivating process that turns
-                    filament into eye-catching, vibrant creations. Delve into
-                    the fascinating technique of mixing colors and precise
-                    printing. The outcome? Dragons that are not just visually
-                    appealing but also showcase the innovative capabilities of
-                    3D printing technology.
-                  </p>
-                </div>
-                <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-full lg:pl-6">
-                  <div className="flex-1 w-[75vw] lg:w-[40vw] rounded-xl">
-                    <DragonPhoto />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          <ProjectCard>
+            <ProjectInfo>
+              <ProjectName>Chinese New Year Dragons</ProjectName>
+              <ProjectDescription>
+                Uncover the wonder of crafting Gradient Chinese New Year Dragons
+                with 3D printers, a captivating process that turns filament into
+                eye-catching, vibrant creations. Delve into the fascinating
+                technique of mixing colors and precise printing. The outcome?
+                Dragons that are not just visually appealing but also showcase
+                the innovative capabilities of 3D printing technology.
+              </ProjectDescription>
+            </ProjectInfo>
+            <ProjectImage>
+              <DragonPhoto />
+            </ProjectImage>
+          </ProjectCard>
         </section>
         <section className="mt-20">
           <h2 className="text-3xl font-bold text-center text-white mb-5">
