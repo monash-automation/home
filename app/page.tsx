@@ -300,7 +300,7 @@ export default function Home() {
             <FacebookIcon className="w-6 h-6 text-white" />
           </Link>
 
-          <Link href={"https://www.instagram.com/automation_monash/"}>
+          <Link href={"https://www.instagram.com/monash.automation"}>
             <InstagramIcon className="w-6 h-6 text-white" />
           </Link>
           <Link
