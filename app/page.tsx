@@ -315,7 +315,7 @@ export default function Home() {
           </Link>
         </div>
         <p className="text-white">
-          Building 60, Monash University Clayton campus, Australia
+          G.25 Building 60, Monash University Clayton campus, Australia
         </p>
         <p className="text-white">Copyright © 2023 Monash Automation</p>
       </footer>
