@@ -8,28 +8,31 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import React from "react";
+import { cn } from "@/lib/utils";
 
 export type Photo = {
   image: StaticImageData;
   description: string;
 };
 
-type PhotoCarouselProps = {
+export type PhotoCarouselProps = React.ComponentProps<"div"> & {
   photos: Photo[];
 };
 
-export function PhotoCarousel({ photos }: PhotoCarouselProps) {
+export function PhotoCarousel({ photos, className }: PhotoCarouselProps) {
   return (
     <Carousel
       plugins={[
         Autoplay({
-          delay: 7000,
+          delay: 9000,
         }),
       ]}
       opts={{
         loop: true,
         duration: 50,
       }}
+      className={cn(className)}
     >
       <CarouselContent>
         {photos.map((photo: Photo, index: number) => (

@@ -1,6 +1,18 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
+import React from "react";
+import Link from "next/link";
+import {
+  FiFacebook,
+  FiGithub,
+  FiInstagram,
+  FiLinkedin,
+  FiYoutube,
+} from "react-icons/fi";
+import { PiTiktokLogo } from "react-icons/pi";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +28,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          inter.className,
+          "px-8 py-10 font-sans text-lg",
+          "bg-gradient-to-tl from-blue-500 to-green-400",
+        )}
+      >
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

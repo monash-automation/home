@@ -26,7 +26,7 @@ export function ProjectInfo({
   return (
     <div
       className={cn("m-2 lg:m-4 text-balance", className)}
-      aria-label="container of project name and description"
+      aria-description="Project name and a detailed introduction"
     >
       {children}
     </div>
@@ -40,7 +40,7 @@ export function ProjectImage({
   return (
     <div
       className={cn("rounded-full m-2 lg:m-4", className)}
-      aria-label="container of project image"
+      aria-description="Project images"
     >
       {children}
     </div>
@@ -54,7 +54,7 @@ export function ProjectCard({
   return (
     <Card
       className={cn("bg-white rounded-xl shadow-md", className)}
-      aria-label="project card"
+      aria-description="Description of the project"
     >
       <CardContent
         className={cn(
@@ -63,7 +63,7 @@ export function ProjectCard({
           "p-4 md:p-6 lg:p-10",
           className,
         )}
-        aria-label="project card content"
+        aria-description="project card content"
       >
         {children}
       </CardContent>
