@@ -5,9 +5,26 @@ import {
   ProjectInfo,
   ProjectName,
 } from "@/components/projects/project-card";
-import Image from "next/image";
+import { Photo, PhotoCarousel } from "@/components/photo-carousel";
 import photoModel from "@/public/projects/loong/model.jpg";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import printingLoong from "@/public/projects/loong/printing.jpg";
+import adjustPrinter from "@/public/projects/loong/adjust-printer.jpg";
+
+
+const photos: Photo[] = [
+  {
+    image: photoModel,
+    description: "Layout of the printing service equipments",
+  },
+  {
+    image: printingLoong,
+    description: "Loong model being printed by the 3D printer",
+  },
+  {
+    image: adjustPrinter,
+    description: "Keenan adjusting the printer",
+  },
+];
 
 export default function LoongProjectCard() {
   return (
@@ -24,14 +41,7 @@ export default function LoongProjectCard() {
         </ProjectDescription>
       </ProjectInfo>
       <ProjectImage>
-        <AspectRatio ratio={4 / 3}>
-          <Image
-            className="rounded-[0.4rem]"
-            src={photoModel}
-            alt="a printed loong model"
-            sizes="100vw"
-          />
-        </AspectRatio>
+        <PhotoCarousel photos={photos} className="lg:top-6" />
       </ProjectImage>
     </ProjectCard>
   );
