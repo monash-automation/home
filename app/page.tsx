@@ -16,10 +16,7 @@ import {
   TeamCardTitle,
 } from "@/components/teams/team-card";
 import { cn } from "@/lib/utils";
-import {
-  BusinessMemberRecruitmentCard,
-  TechMemberRecruitmentCard,
-} from "@/components/recruitment-card";
+
 
 export const metadata: Metadata = {
   title: "Monash Automation",
@@ -140,21 +137,7 @@ export default function Home() {
           <PrintingServiceProjectCard />
           <XmasTreeProjectCard />
           <LoongProjectCard />
-        </section>
-        <section className="mt-20" aria-description="Recruitment">
-          <h2 className="text-3xl font-bold text-center text-white mb-5">
-            Join Us
-          </h2>
-          <p className="text-center text-white mb-10">
-            We are looking for skilled and passionate individuals to join our
-            team
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <TechMemberRecruitmentCard />
-            <BusinessMemberRecruitmentCard />
-          </div>
-        </section>
+        </section>     
       </main>
     </>
   );
