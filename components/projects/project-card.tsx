@@ -8,7 +8,7 @@ export function ProjectName({
   children,
 }: React.ComponentProps<"h3">) {
   return (
-    <h3 className={cn("text-2xl font-bold mb-5", className)}>{children}</h3>
+    <h3 className={cn("text-2xl font-bold mb-1", className)}>{children}</h3>
   );
 }
 
@@ -25,7 +25,7 @@ export function ProjectInfo({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("m-2 lg:m-4 text-balance", className)}
+      className={cn("m-2 mt-0 lg:m-4 text-balance", className)}
       aria-description="Project name and a detailed introduction"
     >
       {children}
@@ -39,7 +39,7 @@ export function ProjectImage({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("rounded-full m-2 lg:m-4", className)}
+      className={cn("rounded-full m-2 mb-1 lg:mb-0 lg:m-4", className)}
       aria-description="Project images"
     >
       {children}

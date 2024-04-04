@@ -29,6 +29,9 @@ const photos: Photo[] = [
 export default function LoongProjectCard() {
   return (
     <ProjectCard>
+      <ProjectImage>
+        <PhotoCarousel photos={photos}/>
+      </ProjectImage>
       <ProjectInfo>
         <ProjectName>Chinese Dragon (Loong) Models</ProjectName>
         <ProjectDescription>
@@ -37,9 +40,6 @@ export default function LoongProjectCard() {
           vibrant creations.
         </ProjectDescription>
       </ProjectInfo>
-      <ProjectImage>
-        <PhotoCarousel photos={photos} className="lg:top-6" />
-      </ProjectImage>
     </ProjectCard>
   );
 }

@@ -37,7 +37,7 @@ export function PhotoCarousel({ photos, className }: PhotoCarouselProps) {
       <CarouselContent>
         {photos.map((photo: Photo, index: number) => (
           <CarouselItem key={index}>
-            <AspectRatio ratio={4 / 3}>
+            <AspectRatio ratio={16 / 9}>
               <Image
                 src={photo.image}
                 alt={photo.description}

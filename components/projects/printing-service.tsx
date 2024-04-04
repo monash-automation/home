@@ -23,6 +23,9 @@ const photos: Photo[] = [
 export default function PrintingServiceProjectCard() {
   return (
     <ProjectCard>
+      <ProjectImage>
+        <PhotoCarousel photos={photos} />
+      </ProjectImage>
       <ProjectInfo>
         <ProjectName>Automated Printing Service</ProjectName>
         <ProjectDescription>
@@ -30,9 +33,6 @@ export default function PrintingServiceProjectCard() {
           user-friendly solution to bring their 3D models to life. 
         </ProjectDescription>
       </ProjectInfo>
-      <ProjectImage>
-        <PhotoCarousel photos={photos} className="lg:top-6" />
-      </ProjectImage>
     </ProjectCard>
   );
 }
