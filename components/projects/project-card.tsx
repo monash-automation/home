@@ -53,12 +53,12 @@ export function ProjectCard({
 }: React.ComponentProps<"div">) {
   return (
     <Card
-      className={cn("bg-white rounded-xl shadow-md", className)}
+      className={cn("bg-white bg-opacity-30 rounded-xl shadow-md", className)}
       aria-description="Description of the project"
     >
       <CardContent
         className={cn(
-          "grid grid-cols-1 md:grid-cols-2 justify-center items-center content-center",
+          "grid grid-cols-1 justify-center items-center content-center",
           "gap-3 md:gap-6 lg:gap-10",
           "p-4 md:p-6 lg:p-10",
           className,

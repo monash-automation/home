@@ -131,7 +131,7 @@ export default function Home() {
           aria-description="Introduction of projects"
         >
           <h2 className="text-3xl font-bold text-center text-white">
-            Our Projects
+            Lab Overview
           </h2>
 
           <PrintingServiceProjectCard />

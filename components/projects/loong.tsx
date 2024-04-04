@@ -34,10 +34,7 @@ export default function LoongProjectCard() {
         <ProjectDescription>
           Uncover the wonder of crafting Gradient Chinese dragons with 3D
           printers, a captivating process that turns filament into eye-catching,
-          vibrant creations. Delve into the fascinating technique of mixing
-          colors and precise printing. The outcome? Dragons that are not just
-          visually appealing but also showcase the innovative capabilities of 3D
-          printing technology.
+          vibrant creations.
         </ProjectDescription>
       </ProjectInfo>
       <ProjectImage>

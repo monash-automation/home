@@ -32,7 +32,7 @@ export default function RootLayout({
         className={cn(
           inter.className,
           "px-8 py-10 font-sans text-lg",
-          "bg-gradient-to-tl from-blue-500 to-green-400",
+          "bg-gradient-to-tl from-orange-200 via-blue-400 to-indigo-600",
         )}
       >
         {children}
