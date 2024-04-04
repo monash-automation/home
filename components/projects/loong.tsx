@@ -29,20 +29,17 @@ const photos: Photo[] = [
 export default function LoongProjectCard() {
   return (
     <ProjectCard>
+      <ProjectImage>
+        <PhotoCarousel photos={photos}/>
+      </ProjectImage>
       <ProjectInfo>
         <ProjectName>Chinese Dragon (Loong) Models</ProjectName>
         <ProjectDescription>
           Uncover the wonder of crafting Gradient Chinese dragons with 3D
           printers, a captivating process that turns filament into eye-catching,
-          vibrant creations. Delve into the fascinating technique of mixing
-          colors and precise printing. The outcome? Dragons that are not just
-          visually appealing but also showcase the innovative capabilities of 3D
-          printing technology.
+          vibrant creations.
         </ProjectDescription>
       </ProjectInfo>
-      <ProjectImage>
-        <PhotoCarousel photos={photos} className="lg:top-6" />
-      </ProjectImage>
     </ProjectCard>
   );
 }

@@ -12,7 +12,7 @@ export function TeamCardTitle({
       className={cn(
         "p-4 space-y-0",
         "flex flex-row items-center content-center justify-between",
-        "text-2xl font-bold",
+        "text-2xl font-bold text-gray-900 bg-white bg-opacity-20",
         className,
       )}
     >
@@ -24,7 +24,7 @@ export function TeamCardTitle({
 export function TeamCardDescription({ children }: React.ComponentProps<"p">) {
   return (
     <CardContent className="p-4">
-      <p className="text-gray-600">{children}</p>
+      <p className="text-white">{children}</p>
     </CardContent>
   );
 }
@@ -32,26 +32,12 @@ export function TeamCardDescription({ children }: React.ComponentProps<"p">) {
 export function TeamCard({ className, children }: React.ComponentProps<"div">) {
   return (
     <Card
-      className={cn("bg-white rounded-xl shadow-md overflow-hidden", className)}
+      className={cn("bg-white bg-opacity-20 rounded-xl shadow-md overflow-hidden", className)}
     >
       {children}
     </Card>
   );
 }
 
-function ManuTeamCard() {
-  return (
-    <TeamCard>
-      <TeamCardTitle>
-        <h3>Manufacturing</h3>
-        <MdOutlinePrecisionManufacturing className="w-6 h-6" />
-      </TeamCardTitle>
-      <TeamCardDescription>
-        The manufacturing team aims to design and build smart systems. Our
-        current project, “The Matrix”, is a modular shelving unit designed for
-        3D printers. This will be the backbone of our automated printing
-        service.
-      </TeamCardDescription>
-    </TeamCard>
-  );
-}
+
+

@@ -22,7 +22,7 @@ export type PhotoCarouselProps = React.ComponentProps<"div"> & {
 
 export function PhotoCarousel({ photos, className }: PhotoCarouselProps) {
   return (
-    <Carousel
+    <Carousel 
       plugins={[
         Autoplay({
           delay: 9000,
@@ -31,13 +31,14 @@ export function PhotoCarousel({ photos, className }: PhotoCarouselProps) {
       opts={{
         loop: true,
         duration: 50,
+        watchDrag: false
       }}
       className={cn(className)}
     >
       <CarouselContent>
         {photos.map((photo: Photo, index: number) => (
           <CarouselItem key={index}>
-            <AspectRatio ratio={4 / 3}>
+            <AspectRatio ratio={16 / 9}>
               <Image
                 src={photo.image}
                 alt={photo.description}

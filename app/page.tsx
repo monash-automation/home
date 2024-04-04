@@ -7,9 +7,8 @@ import { FaCode } from "react-icons/fa6";
 import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
-import PrintingServiceProjectCard from "@/components/projects/printing-service";
-import XmasTreeProjectCard from "@/components/projects/xmas-tree";
-import LoongProjectCard from "@/components/projects/loong";
+import LabOverview from "@/components/projects/lab-overview";
+
 import {
   TeamCard,
   TeamCardDescription,
@@ -127,16 +126,13 @@ export default function Home() {
         </section>
 
         <section
-          className="grid grid-cols-1 gap-4 md:gap-8 lg:gap-12 lg:mx-20"
-          aria-description="Introduction of projects"
+          className="grid grid-cols-1 gap-4 md:gap-8 lg:gap-12 lg:mx-10"
+          aria-description="Lab Projects Overview"
         >
           <h2 className="text-3xl font-bold text-center text-white">
-            Our Projects
+            Lab Overview
           </h2>
-
-          <PrintingServiceProjectCard />
-          <XmasTreeProjectCard />
-          <LoongProjectCard />
+          <LabOverview />
         </section>     
       </main>
     </>
