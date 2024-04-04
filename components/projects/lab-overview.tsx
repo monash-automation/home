@@ -12,7 +12,7 @@ import LoongProjectCard from "@/components/projects/loong";
 
 const LabOverview = () => {
   return (
-    <Carousel>
+    <Carousel opts={{watchDrag: false}}>
       <CarouselContent>
         <CarouselItem>
           <PrintingServiceProjectCard />

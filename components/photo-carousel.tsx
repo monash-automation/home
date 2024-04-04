@@ -22,7 +22,7 @@ export type PhotoCarouselProps = React.ComponentProps<"div"> & {
 
 export function PhotoCarousel({ photos, className }: PhotoCarouselProps) {
   return (
-    <Carousel
+    <Carousel 
       plugins={[
         Autoplay({
           delay: 9000,
@@ -31,6 +31,7 @@ export function PhotoCarousel({ photos, className }: PhotoCarouselProps) {
       opts={{
         loop: true,
         duration: 50,
+        watchDrag: false
       }}
       className={cn(className)}
     >
