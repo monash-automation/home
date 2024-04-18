@@ -24,7 +24,7 @@ const links: { href: string; icon: IconType }[] = [
     icon: FiFacebook,
   },
   {
-    href: "https://www.instagram.com/monash.automation",
+    href: "https://www.instagram.com/monashautomation",
     icon: FiInstagram,
   },
   {
